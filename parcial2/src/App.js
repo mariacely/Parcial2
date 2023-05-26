@@ -14,9 +14,9 @@ export default function App() {
      <IntlProvider locale={navigator.language} messages={messages}>
     <BrowserRouter>
       <Routes>
-        <Route exact path="/home" element={<LandingPage/>} />
+        <Route exact path="/books" element={<LandingPage/>} />
         <Route exact path="/" element={<Login/>} />
-        <Route path="foros/:foroId"element={<DetailPage/>} />
+        <Route path="books/:bookid"element={<DetailPage/>} />
         <Route path="*" element="Not Found" />
       </Routes>
     </BrowserRouter>

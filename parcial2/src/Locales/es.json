@@ -1,3 +1,17 @@
 {
-    "title":"Hola"
+    "Button":"Iniciar sesion",
+    "Books":"Encuentra hasta el libro que no estabas buscando",
+    "Books1":"Tu libreria Aliada",
+    "User":"Nombre de usuario",
+    "Password":"Contraseña",
+    "LoginFailed":"Inicio de sesion fallido",
+    "Title":"Titulo : ",
+    "Isbn":"Isbn : ",
+    "Author":"Autor : ",
+    "Description":"Descripcion : ",
+    "Publisher":"Publicador : ",
+    "Genre":"Genero : ",
+    "Price":"Precio : ",
+    "Year":"Año : ",
+    "Available":"Disponibilidad : "
 }

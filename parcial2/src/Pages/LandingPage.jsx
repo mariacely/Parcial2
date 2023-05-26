@@ -44,7 +44,7 @@ function LandingPage() {
           <div className="flex flex-wrap justify-center gap-4">
             {libros.map((book) => (
               <Cards
-                link={book.id}
+                link={book.id.toString()}
                 img={book.image}
                 title={book.name}
                 titleColor="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-orange-500"

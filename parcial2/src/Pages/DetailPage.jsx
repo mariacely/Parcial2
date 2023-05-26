@@ -7,7 +7,7 @@ function DetailPage() {
   const { bookid } = useParams();
   console.log(bookid)
 
-  const [comments, setComments] = useState([]);
+  const [books, setBooks] = useState([]);
   const token = sessionStorage.getItem('jwtToken');
   axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
@@ -18,7 +18,7 @@ function DetailPage() {
       await axios
         .get(url)
         .then((res) => {
-          setComments(res.data);
+          setBooks(res.data);
           localStorage.setItem("books"+bookid, JSON.stringify(res.data))
         })
         .catch((err) => {
@@ -27,7 +27,7 @@ function DetailPage() {
     }
     else {
       if(localStorage.getItem("books"+bookid)) {
-        setComments(JSON.parse(localStorage.getItem("books"+bookid)));
+        setBooks(JSON.parse(localStorage.getItem("books"+bookid)));
     }
 
     }};
@@ -40,22 +40,20 @@ function DetailPage() {
     <div className="p-4 sm:p-8">
       <div className="flex flex-col">
         <h1 className="text-white text-2xl font-semibold mb-4">
-          detalle 
         </h1>
         <div className="flex flex-wrap justify-center gap-4">
-          {comments.map((detail) => (
             <Datail
-              title={detail.id}
-              author={detail.author}
-              publisher={detail.publisher}
-              year={detail.year}
+              title={books.name}
+              author={books.author}
+              publisher={books.publisher}
+              year={books.year}
               styles="bg-neutral-50"
-              description={detail.summary}
-              Price={detail.price}
-              Genre={detail.gender}
-              availeble={detail.available_online}
+              description={books.summary}
+              isbn={books.isbn}
+              Price={books.price}
+              Genre={books.gender}
+              available={books.available_online}
             />
-          ))}
         </div>
       </div>
     </div>

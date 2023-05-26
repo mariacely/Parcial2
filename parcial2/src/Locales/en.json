@@ -1,3 +1,21 @@
 {
-    "title":"Hello"
+    "Button":"Sign in",
+    "Books":"Find the book that you were not even searching for",
+    "Books1":"Your Allied bookstore",
+    "User":"Username",
+    "Password":"Password",
+    "LoginFailed": "Login Failed",
+    "Title":"Title : ",
+    "Isbn":"Isbn : ",
+    "Author":"Author : ",
+    "Description":"Description : ",
+    "Publisher":"Publisher : ",
+    "Genre":"Genre : ",
+    "Price":"Price : ",
+    "Year":"Year : ",
+    "Available":"Available : "
+
+
+
+
 }
